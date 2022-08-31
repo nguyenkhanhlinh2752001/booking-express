@@ -22,10 +22,6 @@ dotenv.config()
 // middleware
 
 app.use(express.json())
-app.use( ( req, res, next ) => {
-    console.log( 'middleware' );
-    next()
-})
 
 app.use( '/auth', authRoute )
 app.use( '/hotels', hotelRoute )
